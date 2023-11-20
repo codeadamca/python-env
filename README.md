@@ -92,7 +92,7 @@ Note: I have excluded this step in this repo so you can view both the `.env` and
 ## Repo Sesources
 
 * [Visual Studio Code](https://code.visualstudio.com/) 
-* [PHP](https://php.net)
+* [Python](https://www.python.org/)
 
 <a href="https://codeadam.ca">
 <img src="https://codeadam.ca/images/code-block.png" width="100">
