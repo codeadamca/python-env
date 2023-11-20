@@ -55,19 +55,36 @@ Note: I have excluded this step in this repo so you can view both the `.env` and
 6. In your database connection file, add this function to load the variables from the `.env` file, and place them in matching constants:
     
     ```python
-    $env = file(__DIR__.'/.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    
-    foreach($env as $value)
-    {
-      $value = explode('=', $value);
-      define($value[0], $value[1]);
-    }
+    import mysql.connector
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
+    DB_HOST = os.getenv('DB_HOST')
+    DB_DATABASE = os.getenv('DB_DATABASE')
+    DB_USERNAME = os.getenv('DB_USERNAME')
+    DB_PASSWORD = os.getenv('DB_PASSWORD')
+
+    API_KEY = os.getenv('API_KEY')
+
+    print(DB_HOST)
     ```
 
 7. Finally, you can use the contants in your database connection and any API code:
     
-    ```php
-    $connect = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+    ```python
+    config = {
+      'user': DB_USERNAME,
+      'password': DB_PASSWORD,
+      'host': DB_HOST,
+      'unix_socket': '/Applications/MAMP/tmp/mysql/mysql.sock',
+      'database': DB_DATABASE,
+      'raise_on_warnings': True
+    }
+
+    cnx = mysql.connector.connect(**config)
+
+    cnx.close()
     ```
 
 ***
