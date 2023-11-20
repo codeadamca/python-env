@@ -1,15 +1,15 @@
-# Hiding PHP Environment Varaibles
+# Hiding Python Environment Varaibles
 
+A basic vanilla Python function to load variables from an `.env` file.
 
+The first time you riun this you may need to install `mysql-connector-python` and `python-dotenv`:
 
+```sh
 python3 -m pip install python-dotenv
-
 python3 -m pip install mysql-connector-python
+```
 
-
-A basic vanilla PHP function to load variables from an `.env` file.
-
-When you are creating a basic vanilla PHP project and want to keep your database credentials and/or API key out of your GitHub repository you can use a `.env` file. 
+When you are creating a basic vanilla Python project and want to keep your database credentials and/or API key out of your GitHub repository you can use a `.env` file. 
 
 1. Create a file called `.env` and place it in your project folder.
 
@@ -54,7 +54,7 @@ Note: I have excluded this step in this repo so you can view both the `.env` and
 
 6. In your database connection file, add this function to load the variables from the `.env` file, and place them in matching constants:
     
-    ```php
+    ```python
     $env = file(__DIR__.'/.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     
     foreach($env as $value)
