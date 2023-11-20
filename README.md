@@ -55,6 +55,7 @@ Note: I have excluded this step in this repo so you can view both the `.env` and
 6. In your database connection file, add this function to load the variables from the `.env` file, and place them in matching constants:
     
     ```python
+    import os
     import mysql.connector
     from dotenv import load_dotenv
 
