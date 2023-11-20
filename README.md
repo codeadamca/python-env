@@ -4,6 +4,8 @@
 
 python3 -m pip install python-dotenv
 
+python3 -m pip install mysql-connector-python
+
 
 A basic vanilla PHP function to load variables from an `.env` file.
 
