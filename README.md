@@ -41,9 +41,6 @@ When you are creating a basic vanilla Python project and want to keep your datab
     .env
     ```
 
-    > [!Note]  
-    > I have excluded this step in this repo so you can view both the `.env` and `.env.sample` files. 
-
 5. If your `.env` file is accessible from a browser, use a `.htaccess` file to hide your `.env` file:
     
     ```sh
@@ -88,6 +85,9 @@ When you are creating a basic vanilla Python project and want to keep your datab
 
     cnx.close()
     ```
+
+> [!Note]  
+> I have excluded step five in this repo so you can view both the `.env` and `.env.sample` files. 
 
 ***
 
